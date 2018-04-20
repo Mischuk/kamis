@@ -1,0 +1,56 @@
+extends _layout
+
+block settings
+  - var title = 'Поиск по сайту';
+  - var user_authorised = false;
+
+block content
+  .m_search
+    .section-title.center
+      h2 Поиск по сайту
+    form.search-form
+      input(type="text" placeholder="Поиск" value="Цыпленок")
+      button(type="submit")
+    .search-result
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-1.jpg", alt="")
+        .details
+          .title: a(href="#") Хрустящий цыпленок
+          .categories
+            ul
+              li: a(href="#") Продукты
+              li: a(href="#") Панировки
+          .desc Невозможно отказать себе в удовольствии попробовать кусочек курочки в хрустящей, золотистой панировке. «Хрустящий цыпленок» придает мясу птицы неповторимый вкус, благодаря точно подобранной композиции специй.
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-2.png", alt="")
+        .details
+          .title: a(href="#") Цыпленок табака
+          .categories
+            ul
+              li: a(href="#") Рецепты
+          .desc Невозможно отказать себе в удовольствии попробовать кусочек курочки в хрустящей, золотистой панировке. «Хрустящий цыпленок» придает мясу птицы неповторимый вкус, благодаря точно подобранной композиции специй. Невозможно отказать себе в удовольствии попробовать кусочек курочки в хрустящей, золотистой панировке. «Хрустящий цыпленок» придает мясу птицы неповторимый вкус, благодаря точно подобранной композиции специй.
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-3.png", alt="")
+        .details
+          .title: a(href="#") Цыпленок табака
+          .categories
+            ul
+              li: a(href="#") Рецепты
+          .desc Невозможно отказать себе в удовольствии попробовать кусочек курочки в хрустящей, золотистой панировке.
+    .paginations
+      ul
+        li: a(class="prev" href="#")
+        li: a(href="#") 1
+        li: a(class="current" href="#") 2
+        li: a(href="#") 3
+        li: a(href="#") 4
+        li: a(href="#") 5
+        li: a(href="#") 6
+        li: a(class="next" href="#")
+  include ../modules/rss-form/m_rss-form

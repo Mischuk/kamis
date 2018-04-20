@@ -1,0 +1,63 @@
+extends _layout
+
+block settings
+  - var title = 'Контакты';
+  - var user_authorised = false;
+
+block content
+  .m_lead-nav
+    ul
+      li: a(class="current" href="#") Контакты
+      li: a(href="#") Обратная связь
+      li: a(href="#") О компании
+      li: a(href="#") Качество
+      li: a(href="#") Карьера
+  .m_contacts
+    .equal-columns
+      .column
+        .locate Москва
+        ul
+          li.address ООО «КАМИС-ПРИПРАВЫ» <br>143401, г. Красногорск, бульвар Строителей, д. 4 к.1, БЦ "Кубик"
+          li.tel тел./факс: +7 495 995-82-93
+          li.email
+            span <b>Отдел продаж:</b>&nbsp;sales@ru.mccormick.com
+            span <b>Общие вопросы:</b>&nbsp;office@ru.mccormick.com
+            span <b>Отдел персонала:</b>&nbsp;hr@ru.mccormick.com
+          li.place Склад: г. Москва, 5-я Магистральная ул., д.15
+          li.tel тел./факс: +7 495 995-82-93
+      .column
+        .locate санкт-петербург
+        ul
+          li.address Филиал в г. Санкт-Петербурге<br> 190020, г. Санкт-Петербург, Набережная обводного канала, д. 132-134-136, корп. 260, литера А (БЦ Реал), 4 этаж
+          li.tel тел./факс: +7 812 313-76-82
+          li.email Spb@ru.mccormick.com
+          li.place Склад: г. Санкт-Петербург, Набережная обводного канала, д. 132-134-136, корп. 260, литера А, 2 этаж
+      .column
+        .locate Украина
+        ul
+          li.address ООО «КАМИС-ПРИПРАВЫ», <br>Украина 04080, г. Киев, ул. Новоконстантиновская, 9
+          li.tel тел/факс: +380 44 277-23-90, 277-23-91, 277-23-92
+          li.email kamis@kamis.com.ua
+    .equal-columns
+      .column
+        .locate Другие города России
+        ul
+          li С торговыми представителями в городах РФ можно связаться по тел:
+          li.tel тел.: +7 495 995-82-93
+          li
+          li или написать письмо на:
+          li.email sales@ru.mccormick.com
+          li с пометкой «Для регионального отдела»
+      .column
+        .locate Пресса
+        ul
+          li.address Для запросов прессы, пожалуйста, обратитесь в наше PR агентство Hill & Knowlton:
+          li.tel тел.: 020 7413 3342
+          li.email schwartz@hkstrategies.com
+      .column
+        .locate Социальные сети
+        .social-buttons
+          a(class="vk" href="#")
+          a(class="in" href="#")
+          a(class="ok" href="#")
+  include ../modules/rss-form/m_rss-form

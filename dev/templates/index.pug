@@ -1,0 +1,79 @@
+extends _layout
+
+block settings
+  - var title = 'Главная';
+  - var user_authorised = false;
+
+block content
+  .m_lead-carousel
+    - var lead_carousel = ["Дарим подарки всем!", "Акция #2"]
+    each item in lead_carousel
+      .slide
+        .image(style="background-image: url(images/content/lead-carousel-image.jpg)")
+        .text
+          .helper
+            h2= item
+            p Узнай подробности акции с призами и подарками
+            a(href="#") Подробнее
+  .m_lead-recipes
+    .section-title
+      h2 Популярные рецепты
+    .recipes-nav
+      .selected-recipe-collapse
+      ul
+        li: a(class="current" data-recipe-type="meat" href="#") Из мяса
+        li: a(data-recipe-type="fish" href="#") Из рыбы
+        li: a(data-recipe-type="vegan" href="#") Вегетарианские
+        li: a(data-recipe-type="dessert" href="#") Десерты
+    .recipes-list
+      each item in lead_recipes
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .like-counter
+              button #{item.like_counter}
+    .details
+      a(class="btn" href="#") Посмотреть все рецепты
+  .m_lead-news
+    .section-title
+      h2 Новинки от Kamis
+    .list
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-1.jpg" alt="")
+        .title: a(href="#") Копченный техасец
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-2.png" alt="")
+        .title: a(href="#") Морская соль
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-3.png" alt="")
+        .title: a(href="#") Золотая рыбка в панировке
+    .details
+      a(class="btn" href="#") Посмотреть все продукты
+  .m_lead-secrets
+    .section-title
+      h2 Наши секреты
+    .secret-nav
+      .selected-secret-collapse
+      ul
+        li: a(class="current" data-secret-type="cond" href="#") Приправы
+        li: a(data-secret-type="facts" href="#") Любопытные факты
+        li: a(data-secret-type="news" href="#") Новости
+    .secret-list
+      each item in lead_secrets
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .desc #{item.desc}
+    .details
+      a(data-secret-type="cond" class="btn" href="#") Посмотреть все приправы
+      a(data-secret-type="facts" class="btn" href="#") Посмотреть все факты
+      a(data-secret-type="news" class="btn" href="#") Посмотреть все новости
+  include ../modules/rss-form/m_rss-form

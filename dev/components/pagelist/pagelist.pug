@@ -1,0 +1,28 @@
+// Templates list
+-
+  var pagelist = [
+    { title: 'Главная', url: 'index.html' },
+    { title: 'О компании', url: 'about.html' },
+    { title: 'Блог', url: 'blog.html' },
+    { title: 'Блог - внутренняя', url: 'blog-inner.html' },
+    { title: 'Категория', url: 'category.html' },
+    { title: 'Контакты', url: 'contacts.html' },
+    { title: 'Обратная связь', url: 'feedback.html' },
+    { title: 'Продукты', url: 'products.html' },
+    { title: 'Продукты - внутренняя', url: 'product-inner.html' },
+    { title: 'Продукты - категория', url: 'products-category.html' },
+    { title: 'Статья - качество', url: 'article.html' },
+    { title: 'Рецепты', url: 'recipes.html' },
+    { title: 'Рецепты - внутренняя', url: 'recipes-inner.html' },
+    { title: 'Поиск', url: 'search.html' }
+  ]
+#pagelist
+  .pagelist-btn
+  .pagelist-container
+    .site-logo
+      img(src="images/logo.png" alt="")
+    .site-templates
+      ul
+        each value in pagelist
+          li
+             a(href= value.url) #{value.title}

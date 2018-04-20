@@ -1,0 +1,46 @@
+extends _layout
+
+block settings
+  - var title = 'Рецепты';
+  - var user_authorised = false;
+
+block content
+  .page-headling
+    .image(style="background-image: url('images/content/bg-6.png')")
+    .text
+      .helper
+        h2 рецепты от kamis
+        p Вдохновляйтесь на жизнь со вкусом
+  .m_recipes
+    .section-title
+      h2 Самые популярные рецепты
+      p Получайте удовольствие от вкусов, которые вы любите, и открывайте новые.
+    .recipes-list
+      each item in top_recipes
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .like-counter
+              button #{item.like_counter}
+    .details
+      a(class="btn" href="#") Посмотреть еще
+  .m_lead-recipes
+    .section-title
+      h2 Рецепты
+    .recipes-nav
+      .selected-recipe-collapse
+      ul
+        li: a(class="current" data-recipe-type="meat" href="#") Из мяса
+        li: a(data-recipe-type="fish" href="#") Из рыбы
+        li: a(data-recipe-type="vegan" href="#") Вегетарианские
+        li: a(data-recipe-type="dessert" href="#") Десерты
+    .recipes-list
+      each item in lead_recipes
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .like-counter
+              button #{item.like_counter}
+  include ../modules/rss-form/m_rss-form

@@ -1,0 +1,21 @@
+extends _layout
+
+block settings
+  - var title = 'Блог';
+  - var user_authorised = false;
+
+block content
+  .m_lead-nav
+    ul
+      li: a(class="current" href="#") Приправы
+      li: a(href="#") Любопытные факты
+      li: a(href="#") Кухни мира
+      li: a(href="#") Новости
+  .m_blog
+    each item in blog_items
+      .item
+        .image(style="background-image: url("+item.image+")"): a(href="#")
+        .bottom
+          .title: a(href="#") #{item.title}
+          .desc #{item.desc}
+  include ../modules/rss-form/m_rss-form

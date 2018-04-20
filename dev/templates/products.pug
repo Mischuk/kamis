@@ -1,0 +1,68 @@
+extends _layout
+
+block settings
+  - var title = 'Продукты';
+  - var user_authorised = false;
+
+block content
+  .page-headling
+    .image(style="background-image: url('images/content/bg-4.png')")
+    .text
+      .helper
+        h2 Продукты kamis
+        p Все многообразие вкусов
+  .m_lead-news
+    .section-title
+      h2 Новинки от Kamis
+      p Получайте удовольствие от вкусов, которые вы любите, и открывайте новые.
+    .list
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-1.jpg" alt="")
+        .title: a(href="#") Копченный техасец
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-2.png" alt="")
+        .title: a(href="#") Морская соль
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-3.png" alt="")
+        .title: a(href="#") Золотая рыбка в панировке
+  .m_lead-news
+    .section-title
+      h2 Продукция Kamis
+    .list
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-1.png" alt="")
+        .title: a(href="#") Перец, соль и традиционные специи
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-2.png" alt="")
+        .title: a(href="#") Приправы
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-3.png" alt="")
+        .title: a(href="#") мельницы
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-4.png" alt="")
+        .title: a(href="#") горчица
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-5.png" alt="")
+        .title: a(href="#") панировка
+      .item
+        .image
+          a(href="#")
+            img(src="images/content/product-all-6.png" alt="")
+        .title: a(href="#") Маринады для шашлыка и гриля
+  include ../modules/rss-form/m_rss-form

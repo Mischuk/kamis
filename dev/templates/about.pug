@@ -1,0 +1,27 @@
+extends _layout
+
+block settings
+  - var title = 'О компании';
+  - var user_authorised = false;
+
+block content
+  .m_lead-nav
+    ul
+      li: a(href="#") Контакты
+      li: a(href="#") Обратная связь
+      li: a(class="current" href="#") О компании
+      li: a(href="#") Качество
+      li: a(href="#") Карьера
+  article
+    h1 Заголовок H1
+    P Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#">Lorem Ipsum  has been the industry</a>'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    img(src="images/content/article.png", alt="")
+    h2 Заголовок H2
+    P Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#">Lorem Ipsum  has been the industry</a>'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    h3 Заголовок H3
+    P Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#">Lorem Ipsum  has been the industry</a>'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    h4 Заголовок H4
+    P Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#">Lorem Ipsum  has been the industry</a>'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    h5 Заголовок H5
+    P Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#">Lorem Ipsum  has been the industry</a>'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  include ../modules/rss-form/m_rss-form

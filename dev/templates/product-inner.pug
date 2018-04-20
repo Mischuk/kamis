@@ -1,0 +1,47 @@
+extends _layout
+
+block settings
+  - var title = 'Продукт';
+  - var user_authorised = false;
+
+block content
+  .page-headling
+    .image(style="background-image: url('images/content/bg-3.png')")
+    .text.product-balloon
+      .helper
+        h2 Золотистая рыба<br>панировка к рыбе
+        p Приправы
+      .balloon
+        img(src="images/content/product-4.png", alt="")
+  .m_product-description
+    .column
+      .title Ингредиенты
+      .body
+        p Панировочные сухари (мука пшеничная (содержит глютен), соль, вода, дрожжи, ароматизатор), чеснок, мука пшеничная (содержит глютен), соль, горчица, яичный порошок, сладкая паприка, мускатный орех, молоко сухое обезжиренное, пальмовое масло
+        p Продукт может содержать сельдерей, сою.
+        ul
+          li Пищевая ценность 100 г продукта:
+          li белки: 13,8 г
+          li жиры: 3,2 г
+          li углеводы: 62,1 г
+          li энергетическая ценность: 345 ккал
+    .column
+      .title Описание
+      .body
+        p Нежное мясо рыбы сохранит свой вкус, питательность и натуральную сочность, если ее обжарить в золотистой панировке KAMIS. Содержащиеся в панировке приправы придают блюдам неповторимый вкус и аромат. Составные элементы панировки препятствуют излишнему впитыванию жира во время жарения.
+        p Эту панировку вы можете использовать для приготовления любой рыбы, как свежей, так и мороженной. Мороженую рыбу сначала надо подержать в течение 1 минуты в теплой воде, чтобы панировка хорошо приклеилась к поверхности рыбы.
+        p Хранить в сухом прохладном месте. Беречь от солнечных лучей.
+  .m_recipes
+    .section-title.center
+      h2 Рецепты с этим продуктом
+    .recipes-list
+      each item in category_recipes
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .like-counter
+              button #{item.like_counter}
+    .details
+      a(class="btn" href="#") Посмотреть другие рецепты
+  include ../modules/rss-form/m_rss-form

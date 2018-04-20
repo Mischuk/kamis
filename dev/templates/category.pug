@@ -1,0 +1,32 @@
+extends _layout
+
+block settings
+  - var title = 'Категория';
+  - var user_authorised = false;
+
+block content
+  .page-headling
+    .image(style="background-image: url('images/content/bg-2.png')")
+    .text
+      .helper
+        h2 блюда из телятины
+        p Побалуйте себя нежным и сочным мясом
+  .m_category-description
+    .category-icon
+      img(src="images/category-icon-1.png" alt="")
+    article
+      p Благодаря своему нежному мясу телятина является деликатесом и пользуется немалым спросом. Это не только вкусный, но еще и диетический продукт - нежирный и не очень сытный, а его приготовление требует специальных навыков.
+      p Так как в телятине почти отсутствует жир, готовить ее необходимо в какой-то жидкости: к примеру, тушить в соусе, постоянно поливать соком или запекать на решетке, размещенной над противнем с водой. Приготовить это нежнейшее мясо на отлично под силу только опытному кулинару.
+      p Ведь если телятину немного недожарить, то она останется полусырой, а если хоть чуть пережарить, то она станет жесткой и твердой, словно подошва. К тому же не рекомендуется готовить телятину с кровью, поскольку с недожаренного куска будет вытекать смесь молока и светло-розового сока, имеющая неприятный вкус и к тому же не совсем безопасная для здоровья.
+  .m_recipes
+    .recipes-list
+      each item in category_recipes
+        .item(data-item-type=item.type)
+          .image(style="background-image: url("+item.image+")"): a(href="#")
+          .bottom
+            .title: a(href="#") #{item.title}
+            .like-counter
+              button #{item.like_counter}
+    .details
+      a(class="btn" href="#") Посмотреть все рецепты
+  include ../modules/rss-form/m_rss-form
