@@ -31,16 +31,14 @@ block content
     .recipes-nav
       .selected-recipe-collapse
       ul
-        li: a(class="current" data-recipe-type="meat" href="#") Из мяса
-        li: a(data-recipe-type="fish" href="#") Из рыбы
-        li: a(data-recipe-type="vegan" href="#") Вегетарианские
-        li: a(data-recipe-type="dessert" href="#") Десерты
-    .recipes-list
-      each item in lead_recipes
+        li: a(class="current" data-recipe-type="recipes-item" href="#") Основной игредиент
+        li: a(data-recipe-type="dish" href="#") Блюдо
+        li: a(data-recipe-type="national" href="#") Кухня
+        li: a(data-recipe-type="special" href="#") Особые случаи
+    .recipes-list.is-large
+      each item in recipes_page
         .item(data-item-type=item.type)
           .image(style="background-image: url("+item.image+")"): a(href="#")
           .bottom
             .title: a(href="#") #{item.title}
-            .like-counter
-              button #{item.like_counter}
   include ../modules/rss-form/m_rss-form

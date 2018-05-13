@@ -39,6 +39,7 @@
         @media SM
           float left
           margin-right 15px
+          margin-bottom 15px
         a
           anim()
           display block
@@ -86,7 +87,6 @@
   .recipes-list
     clearfix()
     @media SM
-      padding-top 15px
       margin-left -15px
       margin-right -15px
   .item
@@ -159,6 +159,31 @@
         right 25px
         top 25px
         font-size 24px
+  .recipes-list
+    &.is-large
+      @media screen and (min-width: 768px)
+        font-size 0
+      .item
+        @media screen and (min-width: 768px)
+          float none
+          &.current
+            display inline-block
+            vertical-align top
+        @media screen and (min-width: 768px) and (max-width: 991px)
+          width 50%
+        @media screen and (min-width: 992px)
+          width 33.333%
+        .image
+          @media screen and (min-width: 420px)
+            height 250px
+          @media MD
+            height 270px
+        .bottom
+          .title
+            padding-right 0
+            text-align center
+            @media SM
+              height auto
 
 
 
