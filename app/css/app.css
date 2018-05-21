@@ -790,6 +790,23 @@ article ol li:before {
 .social-buttons a:hover {
   background-color: #fd9e28;
 }
+.social-buttons a.fb:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/sprite.png") no-repeat -250px -100px;
+  width: 10px;
+  height: 18px;
+  margin-left: -5px;
+  margin-top: -9px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .social-buttons a.fb:after {
+    background-image: url("../images/sprite@2x.png");
+    background-size: 319px;
+  }
+}
 .social-buttons a.vk:after {
   content: '';
   position: absolute;

@@ -65,6 +65,18 @@
     margin-right 10px
     &:hover
       background-color $orange
+    &.fb
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat -250px -100px;
+        width: 10px;
+        height: 18px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
     &.vk
       &:after
         content ''
