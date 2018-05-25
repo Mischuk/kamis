@@ -3451,7 +3451,7 @@ article ol li:before {
 }
 @media only screen and (min-width: 768px) {
   .m_recipes .item .bottom .title {
-    height: 81px;
+    height: 79px;
     overflow: hidden;
   }
 }
